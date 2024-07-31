@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="header">
+      <h1>LSEG Chatbot</h1>
+    </div>
+
+    <div class="centered-wrapper">
+      <div class="chatbot-container" #chatContainer>
+        <div class="messages">
+          <div *ngFor="let message of messages" [ngClass]="{'sent': message.author === 'user', 'received': message.author === 'bot'}" class="message">
+            <div class="message-content">
+              <p class="message-text">{{ message.text }}</p>
+              <div *ngIf="isChatbotMessage(message) && message.selections" class="selections">
+                <button 
+                  *ngFor="let selection of message.selections" 
+                  [disabled]="message.isDisabled" 
+                  [ngClass]="{'disabled-button': message.isDisabled}"
+                  (click)="onSelectionClick(selection, message)">
+                  {{ selection.name }}
+                </button>
+              </div>
+              <span class="timestamp">{{ message.timestamp | date:'short' }}</span>
+              <span *ngIf="message.hasError" class="timestamp error-text">An error has occured</span>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>

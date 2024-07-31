@@ -1,0 +1,86 @@
+.chatbot-container {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  width: 60%;
+  height: 80%;
+  overflow-y: scroll;
+}
+
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  max-width: 40%;
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+}
+.message-text { 
+  font-size: 12px;
+}
+
+.message.sent {
+  background-color: #d1ffd1;
+  align-self: flex-end;
+}
+
+.message.received {
+  background-color: #f1f1f1;
+  align-self: flex-start;
+}
+
+.message-content {
+  max-width: 100%;
+}
+
+.selections {
+  margin-top: 10px;
+}
+
+.selections button {
+  display: block;
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  font-size: 14px;
+}
+
+.selections button:hover {
+  background-color: #0056b3;
+}
+
+
+.timestamp {
+  display: block;
+  font-size: 8px;
+  color: gray;
+  margin-top: 5px;
+}
+
+.disabled-button {
+  background-color: #ccc !important;  
+  color: #666 !important;  
+  border: 1px solid #999 !important; 
+}
+
+.error-text { 
+  color: red;
+}
