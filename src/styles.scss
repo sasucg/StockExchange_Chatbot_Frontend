@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: normal;
+  font-style: normal;
+}
+
+.container { 
+    height: 100%;
+    width: 100%;
+    background-color: #C8EEFF;
+}
+
+.header {
+  background: linear-gradient(90.44deg, #00B1FF 0%, #074FFF 100%);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional styling to make it pretty */
+body {
+margin: 0;
+}
+
+h1 {
+margin: 0;
+}
+
+.centered-wrapper { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 20px;
+  height: 80%;
+}
